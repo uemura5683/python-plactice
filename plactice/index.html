@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>python</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div id="python_var" style="background-color: red;"></div>
+      <py-script>
+        from datetime import datetime
+        var1 = '赤枠内に、値を入れる'
+        for i in range(5):
+          pyscript.write('python_var', var1)
+          print(f'『{datetime.now()}』pthonで出力!')
+      </py-script>
+      <div id="python_var2" style="background-color: blue;"></div>
+      <py-script output="python_var2">
+        var3 = '青枠内に、値を入れる' 
+        var3
+      </py-script>
+
+    </main>
+  </body>
+</html>
