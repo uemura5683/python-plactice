@@ -1,0 +1,16 @@
+解説
+「num が 2 または 3 または 5 の倍数であること」は、 or 演算子を用いて確かめることができます。
+
+num % 2 == 0 or num % 3 == 0 or num % 5 == 0
+この条件を満たさないことを確かめるには、not 演算子を用いればよいです。
+
+not(num % 2 == 0 or num % 3 == 0 or num % 5 == 0)
+解答例
+# 標準入力から値を受け取る
+# num: int 型
+num = int(input())
+
+if not(num % 2 == 0 or num % 3 == 0 or num % 5 == 0): # 条件を満たさないなら
+    print("Yes")
+else: # そうでないなら
+    print("No")
